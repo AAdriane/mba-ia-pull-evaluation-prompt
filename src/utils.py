@@ -221,6 +221,35 @@ def get_llm(model: Optional[str] = None, temperature: float = 0.0):
             temperature=temperature,
             google_api_key=api_key
         )
+    
+    # Suporte para Claude / Anthropic
+    elif provider in ("claude", "anthropic"):
+        try:
+            from langchain_anthropic import ChatAnthropic
+        except Exception as exc:
+            raise RuntimeError("LangChain Anthropic LLM não encontrado. Instale a versão compatível.") from exc
+        api_key = os.getenv('ANTHROPIC_API_KEY')
+
+        if not api_key:
+            raise ValueError(
+                "ANTHROPIC_API_KEY não configurada no .env"
+            )
+
+        if (model_name == "claude-haiku-4-5"):
+            return ChatAnthropic(
+                model=model_name,
+                temperature=temperature,
+                api_key=api_key,
+                max_tokens=1024
+            )
+
+        return ChatAnthropic(
+            model=model_name,
+            temperature=temperature,
+            api_key=api_key,
+            max_tokens=8096
+        )
+
 
     else:
         raise ValueError(
