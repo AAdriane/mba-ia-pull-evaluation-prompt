@@ -35,16 +35,16 @@ Foram utilizados dois modelos diferentes para a resolução do desafio, o claude
 
 | Aspecto                        | Claude Sonnet 4.6                                 | Gemini 2.5 Flash                                      |
 |--------------------------------|---------------------------------------------------|-------------------------------------------------------|
-| F1-Score médio                 | 0.75–0.85                                         | 0.91–0.94                                             |
-| Clarity médio                  | 0.72–0.82                                         | 0.95–0.98                                             |
-| Precision médio                | 0.85–0.92                                         | 0.98–1.00                                             |
-| Recall médio                   | 0.62–0.78                                         | 0.90–0.92                                             |
+| F1-Score médio                 | 0.85–0.96                                         | 0.91–0.94                                             |
+| Clarity médio                  | 0.75–0.88                                         | 0.95–0.98                                             |
+| Precision médio                | 0.88–0.95                                         | 0.98–1.00                                             |
+| Recall médio                   | 0.76–0.97                                         | 0.90–0.92                                             |
 | Principal fraqueza             | Truncamento + omissão de seções                   | Omissões pontuais de detalhes específicos             |
-| Verbosidade                    | Excessiva — penaliza clarity                      | Adequada ao formato esperado                          |
-| Aderência ao formato           | Parcial — interpreta o template                   | Alta — segue o template literalmente                  |
+| Verbosidade                    | Excessiva, penaliza clarity                       | Adequada ao formato esperado                          |
+| Aderência ao formato           | Parcial, interpreta o template                    | Alta, segue o template literalmente                   |
 | Alucinações                    | Raras                                             | Raras                                                 |
-| Comportamento sob prompt longo | Degrada — corta seções                            | Estável                                               |
-| Inferência de domínio          | Conservadora — omite quando incerto               | Mais agressiva — infere e declara premissa            |
+| Comportamento sob prompt longo | Degrada, corta seções                             | Estável                                               |
+| Inferência de domínio          | Conservadora, omite quando incerto                | Mais agressiva — infere e declara premissa            |
 
 A diferença não está no entendimento do problema, mas em como cada modelo lida com o template. O Gemini trata o formato como contrato rígido a ser preenchido, já o Sonnet trata como referência e adapta, o que gera verbosidade e truncamento nos casos mais densos. Por fim, foi optado pelo modelo FREE gemini-2.5-flash para resolver o desafio.
 
