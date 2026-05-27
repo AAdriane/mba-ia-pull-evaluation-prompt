@@ -51,10 +51,13 @@ A diferença não está no entendimento do problema, mas em como cada modelo lid
 **Custos com modelo PAGO**
 
 Foram em torno de 10 iterações utilizando o modelo de LLM da anthropic, refatorando e otimizando o prompt, para conseguir estes resultados:
+
 ![Results LLM anthropic](./screenshots/low_score_anthropic.png)
+
 _nota: executado iterações somente até o exemplo número 7_
 
 Custo gerado com testes:
+
 ![Cost LLM anthropic](./screenshots/cost_anthropic_llm.png)
 
 ### Execução prompt ruim (v1)
