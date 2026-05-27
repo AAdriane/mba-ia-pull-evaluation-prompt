@@ -22,7 +22,7 @@
      - Inclusão de 4 exemplos (2 simples, 2 médios, 1 complexo) com bug_report → user story + critérios + contexto técnico, mostrando limites de linhas e estrutura exata.
      - Resultado prático: saída padronizada sem texto adicional, critérios mensuráveis e preservação de valores técnicos do bug.
 
-- Regras e salvaguardas aplicadas:
+- Regras aplicadas:
   - Saída estrita em formatos pré‑definidos (SIMPLES / MÉDIO / COMPLEXO) para evitar derivações.
   - Tratamento de edge cases: inferência documentada com premissas explícitas; SLAs e defaults (ex.: paginação = 20) quando dados faltantes.
   - Regra de não‑repetição entre seções e uso exato de valores numéricos do bug (melhora precisão e rastreabilidade).
